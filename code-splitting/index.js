@@ -1,11 +1,3 @@
-function getComponent() {
-    return import(/* webpackChunkName: "lodash" */ 'lodash').then(({default: _}) => {
-        const element = document.createElement('div')
-        element.innerHTML = _.join(['Hello', 'Webpack'], ' ')
-        return element
-    })
-}
+import _ from 'lodash'
 
-getComponent().then(component => {
-    document.body.appendChild(component);
-})
+console.log(_.join(['hello', 'webpack'], '-'))

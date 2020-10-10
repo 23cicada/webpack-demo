@@ -1,7 +1,7 @@
 function getComponent() {
-    return import(/* webpackChunkName: "lodash" */ 'lodash').then(({default: _}) => {
+    return import(/* webpackChunkName: "another" */ './another').then(({default: fn}) => {
         const element = document.createElement('div')
-        element.innerHTML = _.join(['Hello', 'Webpack'], ' ')
+        element.innerHTML = fn()
         return element
     })
 }

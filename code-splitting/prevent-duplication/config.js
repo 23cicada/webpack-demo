@@ -5,7 +5,7 @@
 
 const dependOn = {
     entry: {
-        index: { import: './index.js', dependOn: 'shared' },
+        index: { import: './config.js', dependOn: 'shared' },
         another: { import: './another.js', dependOn: 'shared' },
         shared: 'lodash'
     }
@@ -13,7 +13,7 @@ const dependOn = {
 
 const splitChunksPlugin = {
     entry: {
-        index: './index.js',
+        index: './config.js',
         another: './another.js'
     },
     optimization: {

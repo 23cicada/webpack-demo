@@ -6,19 +6,12 @@ const { BundleAnalyzerPlugin }  = require('webpack-bundle-analyzer')
 
 module.exports = {
     output: {
-        filename: "[name].bundle.js",
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: "./"
-    },
-    devServer: {
-        publicPath: "/"
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'dist')
     },
     plugins: [
         new HtmlWebpackPlugin(),
         new CleanWebpackPlugin(),
-        new BundleAnalyzerPlugin({
-            analyzerMode: "disabled",
-            generateStatsFile: false
-        })
+        new BundleAnalyzerPlugin()
     ]
 }
